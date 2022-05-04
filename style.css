@@ -1,0 +1,20 @@
+:root{
+    font-size: 62.5%;/*Equivale a 10 px (100% equivale a 16px)*/
+}
+
+body{
+    /* font-family: 'Dm sans';Adicionar fonte Dm sans */
+    font-size: 1.6rem;
+}
+
+h4{
+    font-size: 1.4rem;
+}
+
+h1{
+    font-size: 3.4rem;
+}
+
+p{
+    font-size: 1.8rem;
+}
