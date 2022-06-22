@@ -21,6 +21,7 @@ html{
     padding: 0;
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
 }
 
 .btn{
@@ -35,25 +36,38 @@ header{
     background: var(--brand-green-light);
 }
 
-header .header-top{
+/*Navigation*/
+header .header-light{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+
+    position: fixed;
+    width: 100%;
+    padding: 2rem 2rem;
+
+    z-index: 1000;
 }
 
-/*Navigation*/
+
 header nav{
     display: none;
-    /* display: flex; */
     flex-direction: column;
 
     height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     top: 0;
 
     background: var(--brand-green);
+}
+
+header nav .header-dark{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+
 }
 
 header nav ul{
@@ -115,8 +129,10 @@ header .hero{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    top: 8rem;
     
-    padding: 2rem; 
+    padding: 2rem;  
 }
 
 header .hero h2{
