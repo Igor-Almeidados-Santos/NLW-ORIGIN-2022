@@ -15,18 +15,23 @@ closeBtn.onclick = () => {
 
 console.log(nav)
 
-// Mudança de background ao scrolar a página.
+// Mudança de background ao rolar a página.
 
 const headerLight = document.getElementsByClassName('header-light');
-const img = document.('.headerlight')
+const logo = document.querySelector('.logo-text')
 const page = document.querySelector('body')
+const openMenu = document.querySelector('.open-menu')
 
 page.onscroll = () => {
         if (window.scrollY > 10){
             headerLight[0].style.background = 'var(--brand-green)'
-            console.log(window.scrollY)
+            logo.setAttribute('src', '/assets/img/logo-dark.svg')
+            openMenu.setAttribute('src', '/assets/img/openwhite.svg')
+            
         } else{
             headerLight[0].style.background = 'none'
+            logo.setAttribute('src', '/assets/img/logo-light.svg')
+            openMenu.setAttribute('src', '/assets/img/opengreen.svg')
         }
     
 }
