@@ -24,12 +24,26 @@ html{
     box-sizing: border-box;
 }
 
+body{
+    max-width: 100%;
+}
+
 .btn{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+
     font-weight: 700;
     text-transform: uppercase;
 
     border: none;
     border-radius: 2.8rem;
+
+    color: white;
+    background: var(--brand-green);
+
+    padding: 1.6rem 2.8rem;
+    margin-top: 3rem;
 }
 
 header{
@@ -69,7 +83,7 @@ header nav .header-dark{
     justify-content: space-between;
     align-items: center;
 
-    width: 100%;
+    max-width: 100%;
 
     padding: 2rem 2rem;
 }
@@ -169,18 +183,6 @@ header .hero p{
     color: var(--gray-paragraph);
 }
 
-header .hero .btn{
-    font-size: 1.4rem;
-    display: flex;
-    align-items: center;
-
-    color: white;
-    background: var(--brand-green);
-
-    padding: 1.6rem 2.8rem;
-    margin-top: 3rem;
-}
-
 header .hero .btn:hover{
     padding: 1.8rem 3rem;
     font-size: 1.6rem;
@@ -209,7 +211,7 @@ header .statics{
 
     width: 85vw;
 
-    padding: 20px;
+    padding: 3rem 0;
     background-color: white;
 
     border: solid 1px var(--brand-green-light);
@@ -225,6 +227,7 @@ header .statics h2{
     color: var(--gray-headline);
 
     margin-top: 6rem;
+   
 }
 
 header .statics p{
@@ -235,6 +238,10 @@ header .statics p{
     color: var(--brand-green);
 }
 
+
+header .statics p:nth-last-child(1){
+    margin-bottom: 6rem;
+}
 /*Services*/
 
 main{
@@ -242,7 +249,7 @@ main{
 }
 
 main .services {
-    padding-top: 50vh;
+    padding-top: 60vh;
 
     display: flex;
     flex-direction: column;
@@ -275,7 +282,7 @@ main .services .sevice-cards{
     padding: 0 2rem;
     margin-bottom: 5rem;
 
-    width: 70%;
+    width: 60%;
 
     background-color: #FFFFFF;
     border: solid 1px var(--brand-green-light);
@@ -307,5 +314,230 @@ main .services .sevice-cards p{
     color: var(--gray-paragraph);
 
     margin-top: 1.6rem;
-    margin-bottom: 3.4rem;
+    margin-bottom: 5rem;
+}
+
+/*About us*/
+
+main .about-us{
+    display: flex;
+    flex-direction: column;
+
+    background: var(--brand-beige);
+    
+    padding: 4rem 10rem;
+}
+
+main .about-us h3{
+    font-size: 1.9rem;
+
+    margin-bottom: 2rem;
+
+    color: var(--brand-green);
+}
+
+main .about-us h2{
+    font-size: 3rem;
+
+    margin-bottom: 2rem;
+
+    color: var(--gray-headline);
+}
+
+main .about-us p{
+    font-size: 1.6rem;
+
+    margin-bottom: 5rem;
+
+    color: var(--gray-paragraph);
+}
+
+/*Contact us*/
+
+main .contact-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    background: #FFF;
+    
+    padding: 4rem 10rem;
+}
+
+main .contact-us h2{
+    font-size: 3rem;
+
+    margin-bottom: 2rem;
+
+    color: var(--gray-headline);
+}
+
+main .contact-us .about-us-icon{
+    display: flex;   
+}
+
+main .contact-us .about-us-icon p{
+    display: flex;
+    align-items: center;
+
+    font-size: 1.6rem;
+
+    margin: 1rem;
+
+    color: var(--gray-paragraph);
+}
+
+main .contact-us .btn{
+    min-width: 26rem;
+    max-width: 28rem;
+
+}
+
+main .contact-us .btn img{
+    margin-right: 1rem;
+}
+
+
+main .contact-us .img-homem{
+    margin-top: 5rem;
+}
+
+/*Footer*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    
+    padding: 3rem 12rem;
+
+    background: var(--brand-green);
+}
+
+footer img{
+    max-width: 23.6rem;
+
+    margin: 3rem 0;
+}
+
+footer p{
+    font-size: 1.6rem;
+
+    margin-top: 1rem;
+
+    color: #FFF;
+}
+
+footer .social-media-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 50%;
+    
+    margin-top: 2rem;
+}
+
+footer .social-media-footer img{
+    width: 2.5rem;
+
+    
+}
+
+/*Media Query*/
+
+@media (min-width: 1000px) {
+
+    header .header-light{
+        display: none;
+        
+    }
+
+    header .nav{
+        display: flex;
+        flex-direction: row;
+
+        background-color: var(--brand-green-light);
+
+        padding: 2rem;
+
+        height: 50px;
+    
+        z-index: 1000;
+    }
+
+    header nav .header-dark{ 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        max-width: 100%;
+    
+        padding: 2rem 2rem;
+    }
+
+    header nav .header-dark .close{
+        display: none;
+    }
+    
+    header nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        padding: 2rem 0;
+    }
+    
+    header nav ul li{
+        margin: 2.6rem 0;
+    }
+    
+    header nav ul li a{
+        font-size: 2.4rem;
+        font-weight: 700;
+    
+        color: var(--brand-beige);
+    }
+    
+    header nav ul li a:hover{
+        font-size: 2.5rem;
+    }
+    
+    header nav ul .btn{
+
+        display: none;
+        font-size: 1.9rem;
+        
+        padding: 1.8rem 2.6rem;
+    
+        margin-top: 5rem;
+    
+        background: white;
+        color: var(--brand-green);
+    }
+    
+    header nav ul .btn:hover{
+        padding: 2rem 2.8rem;
+    }
+    
+    header nav .social-midia{
+        display:  none;
+        justify-content: center;
+    
+        margin: 10rem;
+    }
+    
+    header nav .social-midia a{
+        margin: 1.6rem;
+    }
+    
+    header nav .social-midia a:hover img{
+        width: 30px;
+    }
+
 }
